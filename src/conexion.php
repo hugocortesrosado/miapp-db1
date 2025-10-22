@@ -9,6 +9,7 @@ $port = getenv('DB_PORT'); // Para PostgreSQL, Render usa el puerto 5432
 // Define el "Data Source Name" (DSN) para PostgreSQL
 // CAMBIO: "mysql:" se convierte en "pgsql:" y se quita el charset
 // Usa espacios en blanco entre host, port y dbname
+// CÓDIGO CORRECTO: Separa los parámetros con espacios
 $dsn = "pgsql:host=$host port=$port dbname=$db";
 
 try {
