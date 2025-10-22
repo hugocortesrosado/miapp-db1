@@ -28,6 +28,6 @@ RUN echo "DirectoryIndex index.php" > /etc/apache2/conf-available/dir.conf
 # === FIN DE LAS CORRECCIONES DE APACHE ===
 
 # Copia tu aplicación al servidor web
-COPY /src . /var/www/html/
+COPY src/ . /var/www/html/
 
 EXPOSE 80
