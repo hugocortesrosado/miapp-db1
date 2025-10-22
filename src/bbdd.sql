@@ -4,7 +4,7 @@
 CREATE DATABASE miapp;
 
 -- NOTA: Conectar a 'miapp' antes de ejecutar el resto del script.
-
+USE miapp;
 -- Creación de la tabla de alumnos
 CREATE TABLE IF NOT EXISTS alumnos (
   id SERIAL PRIMARY KEY,
