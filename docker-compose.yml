@@ -3,6 +3,7 @@ version: '3.8'
 services:
   nginx:
     image: nginx:latest
+    container_name: nginx_server
     ports:
       - "8080:80"
     volumes:
@@ -13,13 +14,32 @@ services:
 
   php:
     build: .
+    container_name: php_app
     volumes:
       - ./src:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=miapp
+      - DB_USER=usuario
+      - DB_PASSWORD=contraseña
+    depends_on:
+      - db
 
   db:
-    image: mysql:8.1
+    image: postgres:16
+    container_name: postgres_db
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
-      MYSQL_DATABASE: miapp
+      - POSTGRES_DB=miapp
+      - POSTGRES_USER=usuario
+      - POSTGRES_PASSWORD=contraseña
+    ports:
+      - "5432:5432"
     volumes:
       - ./src/bbdd.sql:/docker-entrypoint-initdb.d/bbdd.sql
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
