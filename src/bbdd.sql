@@ -16,11 +16,7 @@ CREATE TABLE IF NOT EXISTS alumnos (
 INSERT INTO alumnos (nombre, email) VALUES
 ('Ana López', 'ana@example.com'),
 ('Luis García', 'luis@example.com'),
-('Marta Ruiz', 'marta@example.com');
-
--- Inserción de alumnos adicionales
-INSERT INTO alumnos (nombre, email) VALUES
-('Pedro Jiménez', 'pedro.jimenez@example.com'),
+('Marta Ruiz', 'marta@example.com'),('Pedro Jiménez', 'pedro.jimenez@example.com'),
 ('Sofía Torres', 'sofia.torres@example.com'),
 ('Javier Blanco', 'javier.b@example.com'),
 ('Elena Sanz', 'elena.sanz@example.com'),
