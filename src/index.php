@@ -13,6 +13,7 @@ try {
 <head>
   <meta charset="utf-8">
   <title>Listado de Alumnos</title>
+   <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
   <h1>Listado de Alumnos</h1>
@@ -25,5 +26,9 @@ try {
   <?php else: ?>
     <p>No hay alumnos.</p>
   <?php endif; ?>
+
+  <footer>
+            <p>Hugo Cortés Rosado | Desarrollo WEB en Entorno Servidor </p>
+        </footer>
 </body>
 </html>
